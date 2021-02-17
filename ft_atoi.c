@@ -6,13 +6,13 @@
 /*   By: aalcara- <aalcara-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/09 19:37:47 by aalcara-          #+#    #+#             */
-/*   Updated: 2021/02/15 19:23:26 by aalcara-         ###   ########.fr       */
+/*   Updated: 2021/02/17 13:40:28 by aalcara-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int				signal(const char *nptr, int *p)
+int				strsignal(const char *nptr, int *p)
 {
 	int		signal;
 
@@ -42,7 +42,7 @@ int				ft_atoi(const char *nptr)
 	{
 		i++;
 	}
-	sig = signal(nptr, &i);
+	sig = strsignal(nptr, &i);
 	while (*(nptr + i) >= '0' && *(nptr + i) <= '9')
 	{
 		nbr = nbr * 10 + (*(nptr + i) - '0');
