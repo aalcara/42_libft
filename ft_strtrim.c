@@ -6,7 +6,7 @@
 /*   By: aalcara- <aalcara-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/09 19:37:47 by aalcara-          #+#    #+#             */
-/*   Updated: 2021/02/15 14:14:52 by aalcara-         ###   ########.fr       */
+/*   Updated: 2021/02/17 04:12:17 by aalcara-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,41 +15,31 @@
 unsigned int	test_start(char const *s1, char const *set)
 {
 	unsigned int		i;
-	unsigned int		newstart;
 
 	i = 0;
-	newstart = 0;
-	while (*(s1 + i) == *(set + i))
+	while (s1[i] != '\0' && ft_strchr(set, s1[i]))
 	{
 		i++;
-		if (*(set + i) == '\0')
-		{
-			newstart = i;
-		}
 	}
-	return (newstart);
+	return (i);
 }
 
 char			*ft_strtrim(char const *s1, char const *set)
 {
-	unsigned int		i;
-	unsigned int		s1len;
-	unsigned int		setlen;
+	unsigned int		k;
+	unsigned int		newlen;
 	unsigned int		newstart;
 
-	s1len = ft_strlen(s1);
-	setlen = ft_strlen(set);
+	k = ft_strlen(s1) - 1;
 	newstart = test_start(s1, set);
-	i = s1len - setlen;
-	s1len = s1len - newstart;
-	while (*(s1 + i) == *set && *(s1 + i) != '\0')
+	if (newstart == k + 1)
 	{
-		set++;
-		i++;
+		return (ft_calloc(1, sizeof(char)));
 	}
-	if (*set == '\0' && *(s1 + i) == '\0')
+	while (k >= newstart && ft_strchr(set, s1[k]))
 	{
-		s1len = s1len - setlen;
+		k--;
 	}
-	return (ft_substr(s1, newstart, s1len));
+	newlen = (k + 1) - newstart;
+	return (ft_substr(s1, newstart, newlen));
 }
