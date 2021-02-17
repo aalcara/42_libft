@@ -6,7 +6,7 @@
 /*   By: aalcara- <aalcara-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/09 19:37:47 by aalcara-          #+#    #+#             */
-/*   Updated: 2021/02/17 14:58:04 by aalcara-         ###   ########.fr       */
+/*   Updated: 2021/02/17 15:16:01 by aalcara-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ char			*ft_strjoin(char const *s1, char const *s2)
 	i = 0;
 	j = 0;
 	len = ft_strlen(s1) + ft_strlen(s2);
-	substr = malloc(len);
+	substr = malloc((len + 1) * sizeof(char));
 	while (*(s1 + i) != '\0')
 	{
 		*(substr + i) = *(s1 + i);
@@ -33,5 +33,6 @@ char			*ft_strjoin(char const *s1, char const *s2)
 		*(substr + i + j) = *(s2 + j);
 		j++;
 	}
+	*(substr + i + j) = '\0';
 	return (substr);
 }
