@@ -6,7 +6,7 @@
 /*   By: aalcara- <aalcara-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/09 14:35:15 by aalcara-          #+#    #+#             */
-/*   Updated: 2021/02/16 23:29:11 by aalcara-         ###   ########.fr       */
+/*   Updated: 2021/02/17 20:59:48 by aalcara-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,4 +51,4 @@ void			ft_putstr_fd(char *s, int fd);
 void			ft_putendl_fd(char *s, int fd);
 void			ft_putnbr_fd(int n, int fd);
 
-#endif // LIBFT_H
+#endif
