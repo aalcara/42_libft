@@ -6,7 +6,7 @@
 /*   By: aalcara- <aalcara-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/09 19:51:37 by aalcara-          #+#    #+#             */
-/*   Updated: 2021/02/18 14:08:24 by aalcara-         ###   ########.fr       */
+/*   Updated: 2021/02/18 15:38:47 by aalcara-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,21 +18,16 @@ size_t		ft_strlcat(char *dst, const char *src, size_t size)
 	unsigned long	j;
 
 	j = 0;
-	i = 0;
-	while (*(dst + i) != '\0')
-	{
-		i++;
-	}
+	i = ft_strlen(dst);
 	while (*(src + j) != '\0' && (i + j + 1) < size)
 	{
 		*(dst + i + j) = *(src + j);
 		j++;
 	}
-	*(dst + i + j) = '\0';
+	if ((i + j) < size)
+		*(dst + i + j) = '\0';
 	while (*(src + j) != '\0')
-	{
 		j++;
-	}
 	if (size < i)
 	{
 		return (size + j);
