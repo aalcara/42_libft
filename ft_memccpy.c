@@ -6,7 +6,7 @@
 /*   By: aalcara- <aalcara-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/08 19:57:48 by aalcara-          #+#    #+#             */
-/*   Updated: 2021/02/08 21:41:18 by aalcara-         ###   ########.fr       */
+/*   Updated: 2021/02/18 13:30:38 by aalcara-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,8 @@ void	*ft_memccpy(void *dest, const void *src, int c, size_t n)
 	i = 0;
 	while (i < n && *((int *)src + i) != c)
 	{
-		*((char *)dest + i) = *((char *)src + i);
-		if (*((char *)src + i) == (char)c)
+		*((unsigned char *)dest + i) = *((unsigned char *)src + i);
+		if (*((unsigned char *)src + i) == (unsigned char)c)
 		{
 			return (void *)(dest + i + 1);
 		}
