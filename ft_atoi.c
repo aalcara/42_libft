@@ -6,13 +6,13 @@
 /*   By: aalcara- <aalcara-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/09 19:37:47 by aalcara-          #+#    #+#             */
-/*   Updated: 2021/02/17 19:57:28 by aalcara-         ###   ########.fr       */
+/*   Updated: 2021/02/19 01:13:19 by aalcara-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int				strsignal(const char *nptr, int *p)
+static int		strsignal(const char *nptr, int *p)
 {
 	int		signal;
 

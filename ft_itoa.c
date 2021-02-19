@@ -6,13 +6,13 @@
 /*   By: aalcara- <aalcara-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/09 19:37:47 by aalcara-          #+#    #+#             */
-/*   Updated: 2021/02/17 14:47:45 by aalcara-         ###   ########.fr       */
+/*   Updated: 2021/02/19 01:46:50 by aalcara-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int				length(long int n)
+static int		length(long int n)
 {
 	long int		len;
 
@@ -34,7 +34,7 @@ int				length(long int n)
 	return (len);
 }
 
-int				divisor(long int n)
+static int		divisor(long int n)
 {
 	long int	div;
 

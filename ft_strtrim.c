@@ -6,13 +6,13 @@
 /*   By: aalcara- <aalcara-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/09 19:37:47 by aalcara-          #+#    #+#             */
-/*   Updated: 2021/02/17 15:36:45 by aalcara-         ###   ########.fr       */
+/*   Updated: 2021/02/19 01:48:57 by aalcara-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-unsigned int	test_start(char const *s1, char const *set)
+static unsigned int	test_start(char const *s1, char const *set)
 {
 	unsigned int		i;
 
@@ -24,7 +24,7 @@ unsigned int	test_start(char const *s1, char const *set)
 	return (i);
 }
 
-char			*ft_strtrim(char const *s1, char const *set)
+char				*ft_strtrim(char const *s1, char const *set)
 {
 	unsigned int		k;
 	unsigned int		newlen;
