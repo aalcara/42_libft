@@ -6,7 +6,7 @@
 /*   By: aalcara- <aalcara-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/09 19:37:47 by aalcara-          #+#    #+#             */
-/*   Updated: 2021/02/20 21:37:34 by aalcara-         ###   ########.fr       */
+/*   Updated: 2021/02/20 21:40:47 by aalcara-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,15 +37,15 @@ static int		count_words(char const *s, char c)
 	return (words);
 }
 
-static char		**put_words(char const *s, char c, int n_words, int i, int j, int k)
+static char		**put_words(char const *s, char c, int n_words)
 {
-	//unsigned int		i;
-	//unsigned int		j;
+	unsigned int		i;
+	unsigned int		j;
 	//unsigned int		k;
 	char				**array;
 
-	//i = 0;
-	//j = 0;
+	i = 0;
+	j = 0;
 	//k = 0;
 	array = ((char **)ft_calloc((n_words + 1), sizeof(char *)));
 	if (array == NULL)
@@ -56,15 +56,15 @@ static char		**put_words(char const *s, char c, int n_words, int i, int j, int k
 		{
 			if (i > j)
 			{
-				array[k] = ft_substr(s, j, (i - j));
-				k++;
+				*array = ft_substr(s, j, (i - j));
+				array++; //k++;
 			}
 			j = i + 1;
 		}
 		i++;
 	}
 	if (i > j)
-		array[k] = ft_substr(s, j, (i - j));
+		*array = ft_substr(s, j, (i - j));
 	return (array);
 }
 
