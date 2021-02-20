@@ -6,7 +6,7 @@
 /*   By: aalcara- <aalcara-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/09 19:37:47 by aalcara-          #+#    #+#             */
-/*   Updated: 2021/02/09 21:46:12 by aalcara-         ###   ########.fr       */
+/*   Updated: 2021/02/20 14:48:45 by aalcara-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ char			*ft_strrchr(const char *s, int c)
 	}
 	while (i >= 0)
 	{
-		if (*(s + i) == c)
+		if (*(s + i) == (char)c)
 		{
 			return (char *)(s + i);
 		}
