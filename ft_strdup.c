@@ -6,7 +6,7 @@
 /*   By: aalcara- <aalcara-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/10 21:02:57 by aalcara-          #+#    #+#             */
-/*   Updated: 2021/02/10 23:30:58 by aalcara-         ###   ########.fr       */
+/*   Updated: 2021/02/20 21:04:24 by aalcara-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,8 @@ char			*ft_strdup(const char *s)
 		len++;
 	}
 	p = (char *)malloc((len + 1) * sizeof(char));
+	if (p == NULL)
+		return (NULL);
 	while (i < len)
 	{
 		*(p + i) = *(s + i);
