@@ -6,7 +6,7 @@
 /*   By: aalcara- <aalcara-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/10 21:02:57 by aalcara-          #+#    #+#             */
-/*   Updated: 2021/02/11 23:39:31 by aalcara-         ###   ########.fr       */
+/*   Updated: 2021/02/20 21:02:35 by aalcara-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ void		*ft_calloc(size_t nmemb, size_t size)
 	i = 0;
 	total = nmemb * size;
 	p = (unsigned char *)malloc(total);
+	if (p == NULL)
+		return (NULL);
 	while (i < total)
 	{
 		*(p + i) = 0;
