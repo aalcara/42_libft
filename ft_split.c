@@ -6,7 +6,7 @@
 /*   By: aalcara- <aalcara-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/09 19:37:47 by aalcara-          #+#    #+#             */
-/*   Updated: 2021/02/19 01:48:17 by aalcara-         ###   ########.fr       */
+/*   Updated: 2021/02/20 21:37:34 by aalcara-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,17 +37,19 @@ static int		count_words(char const *s, char c)
 	return (words);
 }
 
-static char		**put_words(char const *s, char c, int n_words)
+static char		**put_words(char const *s, char c, int n_words, int i, int j, int k)
 {
-	unsigned int		i;
-	unsigned int		j;
-	unsigned int		k;
+	//unsigned int		i;
+	//unsigned int		j;
+	//unsigned int		k;
 	char				**array;
 
-	i = 0;
-	j = 0;
-	k = 0;
+	//i = 0;
+	//j = 0;
+	//k = 0;
 	array = ((char **)ft_calloc((n_words + 1), sizeof(char *)));
+	if (array == NULL)
+		return (NULL);
 	while (s[i] != '\0')
 	{
 		if (s[i] == c)
@@ -71,5 +73,5 @@ char			**ft_split(char const *s, char c)
 	int				n_words;
 
 	n_words = count_words(s, c);
-	return (put_words(s, c, n_words));
+	return (put_words(s, c, n_words, 0, 0, 0));
 }
