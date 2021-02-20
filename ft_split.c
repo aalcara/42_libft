@@ -6,7 +6,7 @@
 /*   By: aalcara- <aalcara-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/09 19:37:47 by aalcara-          #+#    #+#             */
-/*   Updated: 2021/02/20 21:40:47 by aalcara-         ###   ########.fr       */
+/*   Updated: 2021/02/20 21:41:48 by aalcara-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,5 +73,5 @@ char			**ft_split(char const *s, char c)
 	int				n_words;
 
 	n_words = count_words(s, c);
-	return (put_words(s, c, n_words, 0, 0, 0));
+	return (put_words(s, c, n_words));
 }
