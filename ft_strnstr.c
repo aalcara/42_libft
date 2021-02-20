@@ -6,7 +6,7 @@
 /*   By: aalcara- <aalcara-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/09 19:37:47 by aalcara-          #+#    #+#             */
-/*   Updated: 2021/02/13 16:29:30 by aalcara-         ###   ########.fr       */
+/*   Updated: 2021/02/20 15:47:33 by aalcara-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,28 +14,26 @@
 
 char			*ft_strnstr(const char *big, const char *little, size_t len)
 {
-	size_t		i[2];
+	unsigned long		i;
+	unsigned long		j;
 
-	i[0] = 0;
-	i[1] = 0;
-	if (*(little + i[0]) == '\0')
-	{
+	i = 0;
+	j = 0;
+	if (*(little + i) == '\0')
 		return ((char *)big);
-	}
-	while (*(big + i[0]) != '\0' && i[0] <= len)
+	while (*(big + i) != '\0' && len > i)
 	{
-		if (*(big + i[0]) == *(little + i[1]))
+		if (*(big + i) == *(little + j))
 		{
-			i[1] = i[1] + 1;
-			if (*(little + i[1]) == '\0')
-			{
-				return ((char *)(big + i[0] - i[1] + 1));
-			}
+			j++;
+			if (*(little + j) == '\0')
+				return ((char *)(big + i - j + 1));
 		}
-		i[0] = i[0] + 1;
-		if (*(little + i[1]) != *(big + i[0]))
+		i++;
+		if (*(little + j) != *(big + i))
 		{
-			i[1] = 0;
+			i = i - j + 1;
+			j = 0;
 		}
 	}
 	return (NULL);
