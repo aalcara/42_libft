@@ -6,7 +6,7 @@
 /*   By: aalcara- <aalcara-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/09 19:37:47 by aalcara-          #+#    #+#             */
-/*   Updated: 2021/02/20 21:41:48 by aalcara-         ###   ########.fr       */
+/*   Updated: 2021/02/20 21:43:12 by aalcara-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,7 @@ static char		**put_words(char const *s, char c, int n_words)
 		{
 			if (i > j)
 			{
-				*array = ft_substr(s, j, (i - j));
+				array = ft_substr(s, j, (i - j));
 				array++; //k++;
 			}
 			j = i + 1;
@@ -64,7 +64,7 @@ static char		**put_words(char const *s, char c, int n_words)
 		i++;
 	}
 	if (i > j)
-		*array = ft_substr(s, j, (i - j));
+		array = ft_substr(s, j, (i - j));
 	return (array);
 }
 
