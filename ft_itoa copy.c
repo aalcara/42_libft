@@ -6,7 +6,7 @@
 /*   By: aalcara- <aalcara-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/09 19:37:47 by aalcara-          #+#    #+#             */
-/*   Updated: 2021/02/20 21:50:44 by aalcara-         ###   ########.fr       */
+/*   Updated: 2021/02/20 21:09:26 by aalcara-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,6 +64,8 @@ char			*ft_itoa(int n)
 	len = length(new_n);
 	div = divisor(new_n);
 	result = ft_calloc((len + 1), sizeof(char));
+	if (result == NULL)
+		return (NULL);
 	if (new_n < 0)
 	{
 		new_n = (new_n * (-1));

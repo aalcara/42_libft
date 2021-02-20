@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_split.c                                         :+:      :+:    :+:   */
+/*   ft_split copy.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aalcara- <aalcara-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/09 19:37:47 by aalcara-          #+#    #+#             */
-/*   Updated: 2021/02/20 21:49:11 by aalcara-         ###   ########.fr       */
+/*   Updated: 2021/02/20 21:49:04 by aalcara-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,6 +48,8 @@ static char		**put_words(char const *s, char c, int n_words)
 	j = 0;
 	k = 0;
 	array = ((char **)ft_calloc((n_words + 1), sizeof(char *)));
+	if (array == NULL)
+		return (NULL);
 	while (s[i] != '\0')
 	{
 		if (s[i] == c)
