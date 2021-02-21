@@ -6,7 +6,7 @@
 /*   By: aalcara- <aalcara-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/09 19:37:47 by aalcara-          #+#    #+#             */
-/*   Updated: 2021/02/21 02:09:52 by aalcara-         ###   ########.fr       */
+/*   Updated: 2021/02/21 02:13:49 by aalcara-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,9 +78,7 @@ char			*ft_itoa(int n)
 	long int		len;
 	long int		div;
 	long int		new_n;
-	//int				i;
 
-	//i = 0;
 	new_n = n;
 	len = length(new_n);
 	div = divisor(new_n);
