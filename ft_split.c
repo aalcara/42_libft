@@ -6,7 +6,7 @@
 /*   By: aalcara- <aalcara-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/09 19:37:47 by aalcara-          #+#    #+#             */
-/*   Updated: 2021/02/21 01:30:32 by aalcara-         ###   ########.fr       */
+/*   Updated: 2021/02/21 01:38:38 by aalcara-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,30 +39,32 @@ static int		count_words(char const *s, char c)
 
 static char		**put_words(char const *s, char c, int n_words)
 {
-	unsigned int		i;
+	unsigned int		i[3];
 	unsigned int		j;
 	unsigned int		k;
 	char				**array;
 
-	i = 0;
-	j = 0;
-	k = 0;
+	i[0] = 0;
+	i[1] = 0;
+	i[2] = 0;
 	array = ((char **)ft_calloc((n_words + 1), sizeof(char *)));
 	if (array == NULL)
 		return (NULL);
-	while (s[i] != '\0')
+	while (s[i[0]] != '\0')
 	{
-		if (s[i] == c)
+		if (s[i[0]] == c)
 		{
-			if (i > j)
+			if (i[0] > i[1])
 			{
-				array[k] = ft_substr(s, j, (i - j));
+				array[i[2]] = ft_substr(s, i[1], (i[0] - i[1]));
 				k++;
 			}
-			j = i + 1;
+			i[1] = i[0] + 1;
 		}
-		i++;
+		i[0] = i[0] + 1
 	}
+	if (i[0] > i[1])
+		array[i[2]] = ft_substr(s, i[1], (i[0] - i[1]));
 	return (array);
 }
 
