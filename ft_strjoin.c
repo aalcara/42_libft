@@ -6,7 +6,7 @@
 /*   By: aalcara- <aalcara-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/09 19:37:47 by aalcara-          #+#    #+#             */
-/*   Updated: 2021/03/04 12:28:32 by aalcara-         ###   ########.fr       */
+/*   Updated: 2021/03/04 12:29:46 by aalcara-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,6 @@ char		*ft_strjoin(char const *s1, char const *s2)
 	size_t			s2_len;
 	size_t			total_len;
 	char			*substr;
-	char			temp;
 
 	s1_len = ft_strlen(s1);
 	s2_len = ft_strlen(s2);
