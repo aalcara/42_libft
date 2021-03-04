@@ -6,7 +6,7 @@
 /*   By: aalcara- <aalcara-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/09 19:37:47 by aalcara-          #+#    #+#             */
-/*   Updated: 2021/03/03 12:17:58 by aalcara-         ###   ########.fr       */
+/*   Updated: 2021/03/04 10:56:44 by aalcara-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ size_t		ft_strlen(const char *s)
 
 	i = 0;
 	if (!s)
-		return (0);
+		return (NULL);
 	while (*(s + i) != '\0')
 		i++;
 	return (i);
