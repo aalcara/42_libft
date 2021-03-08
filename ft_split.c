@@ -6,7 +6,7 @@
 /*   By: aalcara- <aalcara-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/09 19:37:47 by aalcara-          #+#    #+#             */
-/*   Updated: 2021/03/08 17:19:19 by aalcara-         ###   ########.fr       */
+/*   Updated: 2021/03/08 17:20:49 by aalcara-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,6 +46,8 @@ char			**ft_split(char const *s, char c)
 	int			n_words;
 	int			i;
 
+	if (!s || !c)
+		return (NULL);
 	i = 0;
 	n_words = 0;
 	while (s[i] != '\0')
