@@ -6,7 +6,7 @@
 /*   By: aalcara- <aalcara-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/16 22:20:32 by aalcara-          #+#    #+#             */
-/*   Updated: 2021/03/08 17:23:54 by aalcara-         ###   ########.fr       */
+/*   Updated: 2021/03/08 17:25:00 by aalcara-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void			ft_putstr_fd(char *s, int fd)
 	int		i;
 
 	if (!s)
-		return (NULL);
+		return;
 	i = 0;
 	while (s[i] != '\0')
 	{
