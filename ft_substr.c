@@ -6,7 +6,7 @@
 /*   By: aalcara- <aalcara-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/09 19:37:47 by aalcara-          #+#    #+#             */
-/*   Updated: 2021/02/20 16:55:32 by aalcara-         ###   ########.fr       */
+/*   Updated: 2021/03/08 17:31:27 by aalcara-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ char			*ft_substr(char const *s, unsigned int start, size_t len)
 		real_len = len;
 		s_len = ft_strlen(s);
 		if (start >= s_len)
-			return (substr = ft_calloc(1, sizeof(char)));
+			return (NULL);
 		if ((s_len - start) < len)
 			real_len = (s_len - start);
 		substr = ft_calloc(real_len + 1, sizeof(char));
