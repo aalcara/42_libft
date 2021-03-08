@@ -6,7 +6,7 @@
 /*   By: aalcara- <aalcara-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/09 19:37:47 by aalcara-          #+#    #+#             */
-/*   Updated: 2021/03/08 16:51:47 by aalcara-         ###   ########.fr       */
+/*   Updated: 2021/03/08 16:52:38 by aalcara-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ char				*ft_strtrim(char const *s1, char const *set)
 	new_len = (k + 1) - new_start;
 	return (ft_substr(s1, new_start, new_len));
 }
-
+/*
 int main (void)
 {
 	char		*s1;
@@ -47,4 +47,4 @@ int main (void)
 	printf("|%s|\n", result);
 	return (0);
 }
-
+*/
