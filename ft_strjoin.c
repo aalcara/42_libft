@@ -6,12 +6,12 @@
 /*   By: aalcara- <aalcara-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/09 19:37:47 by aalcara-          #+#    #+#             */
-/*   Updated: 2021/03/08 15:45:08 by aalcara-         ###   ########.fr       */
+/*   Updated: 2021/03/08 15:46:56 by aalcara-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-/*
+
 char		*ft_strjoin(char const *s1, char const *s2)
 {
 	unsigned int		i;
@@ -39,7 +39,7 @@ char		*ft_strjoin(char const *s1, char const *s2)
 	*(substr + i + j) = '\0';
 	return (substr);
 }
-*/
+/*
 char		*ft_strjoin(char const *s1, char const *s2)
 {
 	unsigned int		len;
@@ -61,3 +61,4 @@ char		*ft_strjoin(char const *s1, char const *s2)
 	*substr = '\0';
 	return (substr_zero);
 }
+*/
