@@ -6,11 +6,36 @@
 /*   By: aalcara- <aalcara-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/09 19:37:47 by aalcara-          #+#    #+#             */
-/*   Updated: 2021/03/08 17:19:19 by aalcara-         ###   ########.fr       */
+/*   Updated: 2021/02/21 01:41:08 by aalcara-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+static int		count_words(char const *s, char c)
+{
+	int		i;
+	int		words;
+
+	i = 0;
+	words = 0;
+	while (s[i] != '\0')
+	{
+		while (s[i] == c && s[i] != '\0')
+		{
+			i++;
+		}
+		if (s[i] != c && s[i] != '\0')
+		{
+			words++;
+		}
+		while (s[i] != c && s[i] != '\0')
+		{
+			i++;
+		}
+	}
+	return (words);
+}
 
 static char		**put_words(char const *s, char c, int n_words)
 {
@@ -43,19 +68,8 @@ static char		**put_words(char const *s, char c, int n_words)
 
 char			**ft_split(char const *s, char c)
 {
-	int			n_words;
-	int			i;
+	int				n_words;
 
-	i = 0;
-	n_words = 0;
-	while (s[i] != '\0')
-	{
-		while (s[i] == c && s[i] != '\0')
-			i++;
-		if (s[i] != c && s[i] != '\0')
-			n_words++;
-		while (s[i] != c && s[i] != '\0')
-			i++;
-	}
+	n_words = count_words(s, c);
 	return (put_words(s, c, n_words));
 }
