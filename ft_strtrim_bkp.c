@@ -6,29 +6,40 @@
 /*   By: aalcara- <aalcara-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/09 19:37:47 by aalcara-          #+#    #+#             */
-/*   Updated: 2021/03/08 16:25:15 by aalcara-         ###   ########.fr       */
+/*   Updated: 2021/03/08 16:10:56 by aalcara-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+static unsigned int	test_start(char const *s1, char const *set)
+{
+	unsigned int		i;
+
+	i = 0;
+	while (s1[i] != '\0' && ft_strchr(set, s1[i]))
+	{
+		i++;
+	}
+	return (i);
+}
+
 char				*ft_strtrim(char const *s1, char const *set)
 {
-	size_t			k;
-	size_t			new_len;
-	size_t			new_start;
-	char			*str_return;
+	unsigned int		k;
+	unsigned int		newlen;
+	unsigned int		newstart;
 
-	if (!s1 || !set)
-		return (NULL);
 	k = ft_strlen(s1) - 1;
-	new_start = 0;
-	while (s1[new_start] != '\0' && ft_strchr(set, s1[new_start]))
-		new_start++;
-	if (new_start == k + 1)
-		return (NULL);
-	while (k >= new_start && ft_strchr(set, s1[k]))
+	newstart = test_start(s1, set);
+	if (newstart == k + 1)
+	{
+		return (ft_calloc(1, sizeof(char)));
+	}
+	while (k >= newstart && ft_strchr(set, s1[k]))
+	{
 		k--;
-	new_len = (k + 1) - new_start;
-	return (ft_substr(s1, new_start, new_len));
+	}
+	newlen = (k + 1) - newstart;
+	return (ft_substr(s1, newstart, newlen));
 }
