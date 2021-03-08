@@ -6,7 +6,7 @@
 /*   By: aalcara- <aalcara-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/09 19:37:47 by aalcara-          #+#    #+#             */
-/*   Updated: 2021/03/08 16:25:15 by aalcara-         ###   ########.fr       */
+/*   Updated: 2021/03/08 16:26:15 by aalcara-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,6 @@ char				*ft_strtrim(char const *s1, char const *set)
 	size_t			k;
 	size_t			new_len;
 	size_t			new_start;
-	char			*str_return;
 
 	if (!s1 || !set)
 		return (NULL);
