@@ -6,7 +6,7 @@
 /*   By: aalcara- <aalcara-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/09 19:37:47 by aalcara-          #+#    #+#             */
-/*   Updated: 2021/03/08 16:26:15 by aalcara-         ###   ########.fr       */
+/*   Updated: 2021/03/08 16:27:03 by aalcara-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,8 @@ char				*ft_strtrim(char const *s1, char const *set)
 	size_t			new_len;
 	size_t			new_start;
 
-	if (!s1 || !set)
-		return (NULL);
+	//if (!s1 || !set)
+	//	return (NULL);
 	k = ft_strlen(s1) - 1;
 	new_start = 0;
 	while (s1[new_start] != '\0' && ft_strchr(set, s1[new_start]))
