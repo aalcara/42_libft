@@ -1,27 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_free.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aalcara- <aalcara-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/02/16 22:20:32 by aalcara-          #+#    #+#             */
-/*   Updated: 2021/03/27 18:17:51 by aalcara-         ###   ########.fr       */
+/*   Created: 2021/03/23 17:04:19 by aalcara-          #+#    #+#             */
+/*   Updated: 2021/03/23 17:04:55 by aalcara-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void			ft_putstr_fd(char *s, int fd)
+char			*ft_free(char *str, int len)
 {
-	int		i;
+	char			str_aux[len + 1];
+	static char		*str_ret;
+	int				i;
 
-	if (!s)
-		return ;
 	i = 0;
-	while (s[i] != '\0')
+	while (i < len)
 	{
-		write(fd, &s[i], 1);
+		str_aux[i] = str[i];
 		i++;
 	}
+	str_aux[len] = '\0';
+	str_ret = str_aux;
+	free(str);
+	return (str_ret);
 }

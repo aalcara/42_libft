@@ -1,27 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_num_len.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aalcara- <aalcara-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/02/16 22:20:32 by aalcara-          #+#    #+#             */
-/*   Updated: 2021/03/27 18:17:51 by aalcara-         ###   ########.fr       */
+/*   Created: 2021/03/22 17:05:58 by aalcara-          #+#    #+#             */
+/*   Updated: 2021/03/27 18:16:47 by aalcara-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void			ft_putstr_fd(char *s, int fd)
+int			ft_num_len(long int number)
 {
-	int		i;
+	int		num_len;
 
-	if (!s)
-		return ;
-	i = 0;
-	while (s[i] != '\0')
+	num_len = 0;
+	if (number == 0)
+		return (1);
+	if (number < 0)
+		num_len++;
+	while (number != 0)
 	{
-		write(fd, &s[i], 1);
-		i++;
+		number = number / 10;
+		num_len++;
 	}
+	return (num_len);
 }

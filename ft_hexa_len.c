@@ -1,27 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_hexa_len.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aalcara- <aalcara-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/02/16 22:20:32 by aalcara-          #+#    #+#             */
-/*   Updated: 2021/03/27 18:17:51 by aalcara-         ###   ########.fr       */
+/*   Created: 2021/03/22 17:05:58 by aalcara-          #+#    #+#             */
+/*   Updated: 2021/03/27 18:19:05 by aalcara-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void			ft_putstr_fd(char *s, int fd)
+int			ft_hexa_len(unsigned long int number)
 {
-	int		i;
+	int		num_len;
 
-	if (!s)
-		return ;
-	i = 0;
-	while (s[i] != '\0')
+	if (number == 0)
+		return (1);
+	num_len = 0;
+	while (number > 0)
 	{
-		write(fd, &s[i], 1);
-		i++;
+		number = number / 16;
+		num_len++;
 	}
+	return (num_len);
 }

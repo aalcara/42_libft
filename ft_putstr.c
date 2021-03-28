@@ -1,27 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aalcara- <aalcara-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/02/16 22:20:32 by aalcara-          #+#    #+#             */
-/*   Updated: 2021/03/27 18:17:51 by aalcara-         ###   ########.fr       */
+/*   Created: 2021/03/13 18:37:17 by aalcara-          #+#    #+#             */
+/*   Updated: 2021/03/13 18:49:08 by aalcara-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void			ft_putstr_fd(char *s, int fd)
+void	ft_putstr(char const *s)
 {
-	int		i;
+	char c;
 
 	if (!s)
 		return ;
-	i = 0;
-	while (s[i] != '\0')
+	while (*s != '\0')
 	{
-		write(fd, &s[i], 1);
-		i++;
+		c = *s;
+		write(1, &c, 1);
+		s++;
 	}
 }
