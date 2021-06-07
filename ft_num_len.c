@@ -6,13 +6,13 @@
 /*   By: aalcara- <aalcara-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/22 17:05:58 by aalcara-          #+#    #+#             */
-/*   Updated: 2021/03/27 18:16:47 by aalcara-         ###   ########.fr       */
+/*   Updated: 2021/05/07 13:55:12 by aalcara-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int			ft_num_len(long int number)
+int	ft_num_len(long int number)
 {
 	int		num_len;
 

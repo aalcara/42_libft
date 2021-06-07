@@ -6,13 +6,13 @@
 /*   By: aalcara- <aalcara-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/10 21:02:57 by aalcara-          #+#    #+#             */
-/*   Updated: 2021/02/20 21:02:35 by aalcara-         ###   ########.fr       */
+/*   Updated: 2021/05/07 13:54:16 by aalcara-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void		*ft_calloc(size_t nmemb, size_t size)
+void	*ft_calloc(size_t nmemb, size_t size)
 {
 	unsigned char	*p;
 	unsigned long	i;

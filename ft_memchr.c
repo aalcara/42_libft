@@ -6,7 +6,7 @@
 /*   By: aalcara- <aalcara-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/09 15:31:22 by aalcara-          #+#    #+#             */
-/*   Updated: 2021/02/09 16:04:53 by aalcara-         ###   ########.fr       */
+/*   Updated: 2021/05/07 13:53:05 by aalcara-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	{
 		if (*((unsigned char *)s + i) == (unsigned char)c)
 		{
-			return (void *)(s + i);
+			return ((void *)(s + i));
 		}
 		i++;
 	}

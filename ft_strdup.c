@@ -6,13 +6,13 @@
 /*   By: aalcara- <aalcara-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/10 21:02:57 by aalcara-          #+#    #+#             */
-/*   Updated: 2021/02/20 21:04:24 by aalcara-         ###   ########.fr       */
+/*   Updated: 2021/05/07 13:55:36 by aalcara-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char			*ft_strdup(const char *s)
+char	*ft_strdup(const char *s)
 {
 	char			*p;
 	unsigned long	i;

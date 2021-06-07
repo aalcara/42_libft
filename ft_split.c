@@ -6,13 +6,13 @@
 /*   By: aalcara- <aalcara-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/09 19:37:47 by aalcara-          #+#    #+#             */
-/*   Updated: 2021/03/08 17:20:49 by aalcara-         ###   ########.fr       */
+/*   Updated: 2021/05/07 14:00:33 by aalcara-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static char		**put_words(char const *s, char c, int n_words)
+static char	**put_words(char const *s, char c, int n_words)
 {
 	unsigned int		i[3];
 	char				**array;
@@ -41,7 +41,7 @@ static char		**put_words(char const *s, char c, int n_words)
 	return (array);
 }
 
-char			**ft_split(char const *s, char c)
+char	**ft_split(char const *s, char c)
 {
 	int			n_words;
 	int			i;

@@ -6,7 +6,7 @@
 /*   By: aalcara- <aalcara-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/16 22:20:32 by aalcara-          #+#    #+#             */
-/*   Updated: 2021/02/20 17:57:39 by aalcara-         ###   ########.fr       */
+/*   Updated: 2021/05/07 14:01:55 by aalcara-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ static unsigned int	divisor(unsigned int num)
 	return (div);
 }
 
-void				ft_putnbr_fd(int n, int fd)
+void	ft_putnbr_fd(int n, int fd)
 {
 	unsigned int	num;
 	unsigned int	div;

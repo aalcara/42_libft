@@ -6,7 +6,7 @@
 /*   By: aalcara- <aalcara-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/13 18:37:17 by aalcara-          #+#    #+#             */
-/*   Updated: 2021/03/13 18:49:08 by aalcara-         ###   ########.fr       */
+/*   Updated: 2021/05/07 13:52:41 by aalcara-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_putstr(char const *s)
 {
-	char c;
+	char	c;
 
 	if (!s)
 		return ;

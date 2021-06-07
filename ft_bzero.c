@@ -6,7 +6,7 @@
 /*   By: aalcara- <aalcara-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/07 22:58:35 by aalcara-          #+#    #+#             */
-/*   Updated: 2021/02/07 23:50:46 by aalcara-         ###   ########.fr       */
+/*   Updated: 2021/05/07 14:00:50 by aalcara-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_bzero(void *s, size_t n)
 {
-	char *aux;
+	char	*aux;
 
 	aux = s;
 	while (n > 0)
