@@ -6,7 +6,7 @@
 #    By: aalcara- <aalcara-@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/02/06 21:35:57 by aalcara-          #+#    #+#              #
-#    Updated: 2021/03/23 17:06:03 by aalcara-         ###   ########.fr        #
+#    Updated: 2021/07/06 15:53:28 by aalcara-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -29,13 +29,13 @@ FLAGS = -Wall -Wextra -Werror
 all:	$(NAME)
 
 $(NAME): $(SRCS) libft.h
-		gcc $(FLAGS) -c $(SRCS)
-		ar rc $(NAME) $(OBJ)
+		@gcc $(FLAGS) -c $(SRCS)
+		@ar rc $(NAME) $(OBJ)
 
 clean:
-		rm -f $(OBJ)
+		@rm -f $(OBJ)
 
 fclean:	clean
-		rm -f $(NAME)
+		@rm -f $(NAME)
 
 re:	fclean all
