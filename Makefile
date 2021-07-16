@@ -6,7 +6,7 @@
 #    By: aalcara- <aalcara-@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/02/06 21:35:57 by aalcara-          #+#    #+#              #
-#    Updated: 2021/07/06 15:53:28 by aalcara-         ###   ########.fr        #
+#    Updated: 2021/07/16 13:17:54 by aalcara-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,11 +18,7 @@ SRCS = ft_calloc.c ft_isascii.c ft_memccpy.c ft_memcpy.c ft_strchr.c ft_strlcpy.
 		ft_strjoin.c ft_substr.c ft_strtrim.c ft_split.c ft_itoa.c ft_strmapi.c ft_putchar_fd.c ft_putstr_fd.c \
 		ft_putendl_fd.c ft_putnbr_fd.c ft_putstr.c ft_putchr.c ft_hexa_len.c ft_num_len.c ft_free.c
 
-OBJ = ft_calloc.o ft_isascii.o ft_memccpy.o ft_memcpy.o ft_strchr.o ft_strlcpy.o ft_strnstr.o ft_toupper.o \
-		ft_atoi.o ft_isalnum.o ft_isdigit.o ft_memchr.o ft_memmove.o ft_strdup.o ft_strlen.o ft_strrchr.o \
-		ft_bzero.o ft_isalpha.o ft_isprint.o ft_memcmp.o ft_memset.o ft_strlcat.o ft_strncmp.o ft_tolower.o \
-		ft_strjoin.o ft_substr.o ft_strtrim.o ft_split.o ft_itoa.o ft_strmapi.o ft_putchar_fd.o ft_putstr_fd.o \
-		ft_putendl_fd.o ft_putnbr_fd.o ft_putstr.o ft_putchr.o ft_hexa_len.o ft_num_len.o ft_free.o
+OBJ = $(SRCS:.c=.o)
 
 FLAGS = -Wall -Wextra -Werror
 
@@ -31,11 +27,18 @@ all:	$(NAME)
 $(NAME): $(SRCS) libft.h
 		@gcc $(FLAGS) -c $(SRCS)
 		@ar rc $(NAME) $(OBJ)
+		@echo "** $(NAME) made! **"
 
-clean:
+clean: oclean
+		@echo "!! libft .o files deleted! !!"
+
+oclean:
 		@rm -f $(OBJ)
 
-fclean:	clean
+fclean:	oclean
 		@rm -f $(NAME)
+		@echo "!! [$(NAME)] deleted! !!"
 
 re:	fclean all
+
+.PHONY: all, clean, fclean, re
