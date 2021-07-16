@@ -1,31 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_free.c                                          :+:      :+:    :+:   */
+/*   ft_putlong_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aalcara- <aalcara-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/03/23 17:04:19 by aalcara-          #+#    #+#             */
-/*   Updated: 2021/07/06 11:37:51 by aalcara-         ###   ########.fr       */
+/*   Created: 2021/07/16 16:59:10 by aalcara-          #+#    #+#             */
+/*   Updated: 2021/07/16 16:59:25 by aalcara-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-// char	*ft_free(char *str, int len)
-// {
-// 	char			*str_aux;
-// 	static char		*str_ret;
-// 	int				i;
-
-// 	i = 0;
-// 	while (i < len)
-// 	{
-// 		str_aux[i] = str[i];
-// 		i++;
-// 	}
-// 	str_aux[len] = '\0';
-// 	str_ret = str_aux;
-// 	free(str);
-// 	return (str_ret);
-// }
+void	ft_putlong_fd(long n, int fd)
+{
+	if (n < 0)
+	{
+		ft_putchar_fd('-', fd);
+		n = -n;
+	}
+	if (n == 0)
+		ft_putchar_fd('0', fd);
+	if (n / 10)
+		ft_putlong_fd(n / 10, fd);
+	ft_putchar_fd(n % 10 + '0', fd);
+}
