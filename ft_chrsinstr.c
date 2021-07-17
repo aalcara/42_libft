@@ -1,27 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putlong_fd.c                                    :+:      :+:    :+:   */
+/*   ft_chrsinstr.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aalcara- <aalcara-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/07/16 16:59:10 by aalcara-          #+#    #+#             */
-/*   Updated: 2021/07/17 09:30:37 by aalcara-         ###   ########.fr       */
+/*   Created: 2021/07/16 18:34:47 by aalcara-          #+#    #+#             */
+/*   Updated: 2021/07/16 18:36:19 by aalcara-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putlong_fd(long n, int fd)
+int	ft_chrsinstr(char *str, char *chars)
 {
-	if (n < 0)
+	int	i;
+	int	count;
+
+	i = 0;
+	count = 0;
+	while (chars[i] != '\0')
 	{
-		ft_putchar_fd('-', fd);
-		n = -n;
+		if (ft_strchr(str, chars[i]))
+			count++;
+		i++;
 	}
-	if (n == 0)
-		ft_putchar_fd('0', fd);
-	if (n / 10)
-		ft_putlong_fd(n / 10, fd);
-	ft_putchar_fd(n % 10 + '0', fd);
+	return (count);
 }

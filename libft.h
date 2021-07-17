@@ -6,7 +6,7 @@
 /*   By: aalcara- <aalcara-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/09 14:35:15 by aalcara-          #+#    #+#             */
-/*   Updated: 2021/07/16 17:03:50 by aalcara-         ###   ########.fr       */
+/*   Updated: 2021/07/17 09:30:28 by aalcara-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,5 +59,6 @@ int				ft_hexa_len(unsigned long int number);
 int				ft_num_len(long int number);
 void			ft_putlong_fd(long n, int fd);
 long int		ft_atol(const char *nptr);
+int				ft_chrsinstr(char *str, char *chars);
 
 #endif
