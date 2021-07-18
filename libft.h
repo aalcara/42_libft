@@ -6,7 +6,7 @@
 /*   By: aalcara- <aalcara-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/09 14:35:15 by aalcara-          #+#    #+#             */
-/*   Updated: 2021/07/17 09:30:28 by aalcara-         ###   ########.fr       */
+/*   Updated: 2021/07/17 22:26:07 by aalcara-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,13 @@
 
 # include <stdlib.h>
 # include <unistd.h>
+
+typedef struct s_dlist
+{
+	int				content;
+	struct s_dlist	*next;
+	struct s_dlist	*prev;
+}	t_dlist;
 
 void			*ft_memset(void *s, int c, size_t n);
 void			ft_bzero(void *s, size_t n);
@@ -60,5 +67,9 @@ int				ft_num_len(long int number);
 void			ft_putlong_fd(long n, int fd);
 long int		ft_atol(const char *nptr);
 int				ft_chrsinstr(char *str, char *chars);
+t_dlist			*ft_dlstnew(int content);
+t_dlist			*ft_dlstlast(t_dlist *list);
+void			ft_dlstadd_front(t_dlist **list, t_dlist *new);
+void			ft_dlstadd_back(t_dlist **list, t_dlist *new);
 
 #endif
