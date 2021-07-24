@@ -6,7 +6,7 @@
 /*   By: aalcara- <aalcara-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/09 14:35:15 by aalcara-          #+#    #+#             */
-/*   Updated: 2021/07/17 22:26:07 by aalcara-         ###   ########.fr       */
+/*   Updated: 2021/07/24 09:51:15 by aalcara-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,5 +71,8 @@ t_dlist			*ft_dlstnew(int content);
 t_dlist			*ft_dlstlast(t_dlist *list);
 void			ft_dlstadd_front(t_dlist **list, t_dlist *new);
 void			ft_dlstadd_back(t_dlist **list, t_dlist *new);
+void			ft_dlstclear(t_dlist **list);
+int				ft_dlstissorted(t_dlist **dlist);
+int				ft_dlstlen(t_dlist **dlist);
 
 #endif
